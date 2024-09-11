@@ -1,0 +1,1 @@
+https://app.swaggerhub.com/apis/JINQILIU122/5619/1.0.0#/Workspace_management/get_user_workspaces
