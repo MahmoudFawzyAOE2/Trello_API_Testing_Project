@@ -29,7 +29,8 @@ public class MainTestSuite {
     RequestSpecification request;
     @BeforeClass
     public void beforeClass (){
-        request = given().baseUri(URLs.BaseURL).queryParams(AuthCredentials.getAuthParams());
+        request = given().baseUri(URLs.BaseURL).queryParams(AuthCredentials.getAuthParams())
+                .header("Accept", "application/json");
 
     }
 
@@ -65,7 +66,6 @@ public class MainTestSuite {
         String endPoint = URLs.boards+Board.getId();
 
         given().spec(request)
-                .header("Accept", "application/json")
                 .queryParams(AuthCredentials.getAuthParams())
                 .when().get(endPoint)
                 .then().log().all()
@@ -80,7 +80,6 @@ public class MainTestSuite {
         String endPoint = URLs.boards+Board.getId()+"/lists";
 
         Response re = given().spec(request)
-                .header("Accept", "application/json")
                 .when().get(endPoint)
                 .then().log().all()
                 .assertThat().statusCode(200)
@@ -108,7 +107,6 @@ public class MainTestSuite {
         String endPoint2 = URLs.lists+Board.getListID2();
 
         given().spec(request)
-                .header("Accept", "application/json")
                 .contentType(ContentType.JSON)
                 .queryParam("name", faker.job().field())
                 .when().put(endPoint2)
@@ -128,7 +126,6 @@ public class MainTestSuite {
 
         // create list
         Response re = given().spec(request)
-                .header("Accept", "application/json")
                 .contentType(ContentType.JSON)
                 .queryParam("name", fakeCat)
                 .queryParam("idBoard", Board.getId())
@@ -167,7 +164,6 @@ public class MainTestSuite {
     public void createCard () throws InterruptedException {
 
         Response re = given().spec(request)
-                .header("Accept", "application/json")
                 .header("Content-Type", "application/json")
                 .queryParam("idList", Board.getListID1())
                 .queryParam("name", faker.commerce().material())
@@ -192,7 +188,6 @@ public class MainTestSuite {
         String endPoint = URLs.cards+cardId;
 
         given().spec(request)
-                .header("Accept", "application/json")
                 .queryParam("idList", Board.getListID2())
                 .queryParam("desc", faker.animal().name())
                 .when().put(endPoint)
@@ -206,7 +201,6 @@ public class MainTestSuite {
         String endPoint = URLs.lists+Board.getListID2();
 
         given().spec(request)
-                .header("Accept", "application/json")
                 .when().get(endPoint)
                 .then().log().all()
                 .assertThat().statusCode(200);
@@ -218,7 +212,6 @@ public class MainTestSuite {
         String endPoint = URLs.lists+Board.getListID2()+"/cards";
 
         Response re = given().spec(request)
-                .header("Accept", "application/json")
                 .when().get(endPoint)
                 .then().log().all()
                 .assertThat().statusCode(200)
@@ -234,7 +227,6 @@ public class MainTestSuite {
         String endPoint = URLs.cards+cardId;
 
         given().spec(request)
-                .header("Accept", "application/json")
                 .when().delete(endPoint)
                 .then().log().all()
                 .assertThat().statusCode(200);
@@ -246,7 +238,6 @@ public class MainTestSuite {
         String endPoint = URLs.lists+cardId;
 
         given().spec(request)
-                .header("Accept", "application/json")
                 .when().get(endPoint)
                 .then().log().all()
                 .assertThat().statusCode(404);
@@ -258,7 +249,6 @@ public class MainTestSuite {
         String endPoint = URLs.lists+Board.getListID3();
 
         given().spec(request)
-                .header("Accept", "application/json")
                 .when().delete(endPoint)
                 .then().log().all()
                 .assertThat().statusCode(501);
