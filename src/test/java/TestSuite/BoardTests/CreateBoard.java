@@ -1,16 +1,24 @@
-package TestSuites;
+package TestSuite.BoardTests;
 
 import EndPoints.URLs;
+import TestSuite.BaseTest.Base;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-/*
-public class ResetTestSuite {
 
-    @Test(priority = 1)
+public class CreateBoard extends Base {
+
+    @Test()
     public void createBoard () {
+
+        // Generate Board name using Faker
+        String fakeBoardName = faker.name().firstName();
+        System.out.println("fakeBoardName: "+ fakeBoardName);
+
+        // add the name to the board data
+        Board.setName(fakeBoardName);
 
         Response re = given().spec(request)
                 .contentType(ContentType.JSON)
@@ -29,4 +37,3 @@ public class ResetTestSuite {
     }
 }
 
- */
