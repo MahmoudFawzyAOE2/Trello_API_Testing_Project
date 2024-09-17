@@ -6,6 +6,7 @@
             <class name="TestSuite.BoardTests.CreateBoard">
                 <methods>
                     <include name="createBoard"/>
+                    <include name="getCardsOnNewBoard"/>
                 </methods>
             </class>
             <class name="TestSuite.BoardTests.GetBoard">
@@ -28,9 +29,34 @@
                     <include name="getCardsOnList"/>
                 </methods>
             </class>
+            <class name="TestSuite.BoardTests.GetCardsOnBoard">
+                <methods>
+                    <include name="getCardsOnBoard"/>
+                </methods>
+            </class>
             <class name="TestSuite.CardTests.GetCard">
                 <methods>
                     <include name="getCard"/>
+                </methods>
+            </class>
+            <class name="TestSuite.CardTests.CreateAttachmentOnCard">
+                <methods>
+                    <include name="createAttachmentOnCard"/>
+                    <include name="createAttachmentMP4Cover"/>
+                    <include name="createAttachmentPDFCover"/>
+                    <include name="createAttachmentJPGCover"/>
+                    <include name="createAttachmentGIFCover"/>
+                </methods>
+            </class>
+            <class name="TestSuite.CardTests.GetAttachmentOnCard">
+            <methods>
+                <include name="getAttachment"/>
+            </methods>
+            </class>
+            <class name="TestSuite.CardTests.DeleteAttachmentOnCard">
+                <methods>
+                    <include name="deleteAttachment"/>
+                    <include name="getAttachmentAfterDelete"/>
                 </methods>
             </class>
             <class name="TestSuite.CardTests.DeleteCard">
@@ -42,6 +68,7 @@
             <class name="TestSuite.ListTests.ArchiveList">
                 <methods>
                     <include name="archiveList"/>
+                    <include name="unarchiveList"/>
                 </methods>
             </class>
             <class name="TestSuite.ListTests.DeleteList">
@@ -52,6 +79,11 @@
             <class name="TestSuite.ListTests.GetList">
                 <methods>
                     <include name="getList"/>
+                </methods>
+            </class>
+            <class name="TestSuite.ListTests.GetBoardOfList">
+                <methods>
+                    <include name="getBoardOfList"/>
                 </methods>
             </class>
             <class name="TestSuite.ListTests.CreateList">

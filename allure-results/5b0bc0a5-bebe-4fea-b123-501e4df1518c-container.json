@@ -1,1 +1,0 @@
-{"uuid":"5b0bc0a5-bebe-4fea-b123-501e4df1518c","name":"TestSuite.ListTests.GetList","children":["e08ce5cd-7429-48ed-9025-0c5f742f3dd0"],"befores":[{"name":"beforeClass","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1726564123762,"stop":1726564123763}],"afters":[],"start":1726564110128,"stop":1726564126334}

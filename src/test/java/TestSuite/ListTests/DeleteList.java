@@ -2,6 +2,7 @@ package TestSuite.ListTests;
 
 import EndPoints.URLs;
 import TestSuite.BaseTest.Base;
+import jdk.jfr.Description;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
@@ -9,12 +10,12 @@ import static io.restassured.RestAssured.given;
 public class DeleteList extends Base {
 
     @Test()
-    public void deleteList () {   // verify that the delete List request in not implemented
-        // end point customization
-        String endPoint = URLs.lists+Board.getListID3();
+    @Description("verify that the delete List request in not implemented")
+    public void deleteList () {
 
         given().spec(request)
-                .when().delete(endPoint)
+                .pathParam("id", Board.getListID3())
+                .when().delete(URLs.lists_id)
                 .then().log().all()
                 .assertThat().statusCode(501);
     }

@@ -8,6 +8,7 @@ public class BoardPojo {
     private String listID2  ;
     private String listID3  ;
     private String cardID ;
+    private String attachID ;
 
     public String getId() {return id;}
     public void setId(String id) {this.id = id;}
@@ -24,5 +25,6 @@ public class BoardPojo {
     public String getName() {return name;}
     public String getCardID() {return cardID;}
     public void setCardID(String cardID) {this.cardID = cardID;}
-
+    public String getAttachID() {return attachID;}
+    public void setAttachID(String attachID) {this.attachID = attachID;}
 }

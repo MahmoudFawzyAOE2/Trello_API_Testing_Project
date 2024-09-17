@@ -3,16 +3,19 @@ package TestSuite.ListTests;
 import EndPoints.URLs;
 import TestSuite.BaseTest.Base;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
+import jdk.jfr.Description;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
+import static java.util.Optional.empty;
+import static org.hamcrest.Matchers.not;
 
 public class CreateList extends Base {
     @Test()
-    public void createAndArchiveList() {
+    @Description("Verify creating List when sending valid post request")
+    public void createList() {
 
-        Response re = given().spec(request)
+        given().spec(request)
                 .contentType(ContentType.JSON)
                 .queryParam("name", faker.cat().name())
                 .queryParam("idBoard", Board.getId())
@@ -20,6 +23,6 @@ public class CreateList extends Base {
                 .then().log().all()
                 .assertThat().statusCode(200)
                 .assertThat().contentType(ContentType.JSON)
-                .extract().response();
+                .assertThat().body("id", not(empty()));
     }
 }

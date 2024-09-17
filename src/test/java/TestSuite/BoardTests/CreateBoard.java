@@ -4,6 +4,7 @@ import EndPoints.URLs;
 import TestSuite.BaseTest.Base;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import jdk.jfr.Description;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
@@ -11,6 +12,7 @@ import static io.restassured.RestAssured.given;
 public class CreateBoard extends Base {
 
     @Test()
+    @Description("Verify creation of a new board")
     public void createBoard () {
 
         // Generate Board name using Faker
@@ -29,11 +31,23 @@ public class CreateBoard extends Base {
                 .assertThat().contentType(ContentType.JSON)
                 .extract().response();
 
+        // storing Board ID
         Board.setId(re.path("id"));
-        System.out.println(Board.getId());
 
+        // storing Board url
         Board.setUrl(re.path("url"));
-        System.out.println(Board.getUrl());
+    }
+
+    @Test()
+    @Description("Verify that a newly created Board has no Cards")
+    public void getCardsOnNewBoard() {
+
+        given().spec(request)
+                .pathParam("id", Board.getId())
+                .when().get(URLs.boards_id_cards)
+                .then().log().all()
+                .assertThat().statusCode(200)
+                .assertThat().contentType(ContentType.JSON);
     }
 }
 

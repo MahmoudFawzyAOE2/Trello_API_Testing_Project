@@ -1,0 +1,1 @@
+{"uuid":"c78f31ee-a608-41b4-8b6c-50cbf2d40b9f","name":"TestSuite.CardTests.GetCard","children":["beb14c71-3c45-4255-b00d-7ea076b98daf"],"befores":[{"name":"beforeClass","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1726602476525,"stop":1726602476526}],"afters":[],"start":1726602465632,"stop":1726602491416}

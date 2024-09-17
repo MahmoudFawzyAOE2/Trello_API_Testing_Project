@@ -4,6 +4,7 @@ import EndPoints.URLs;
 import TestSuite.BaseTest.Base;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import jdk.jfr.Description;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
@@ -12,12 +13,12 @@ import static org.hamcrest.Matchers.equalTo;
 public class GetListsOnBoard extends Base {
 
     @Test()
+    @Description("Verify retrieving an array of Lists in Board when sending valid get request")
     public void getListsOnBoard () {
-        // end point customization
-        String endPoint = URLs.boards+Board.getId()+"/lists";
 
         Response re = given().spec(request)
-                .when().get(endPoint)
+                .pathParam("id", Board.getId())
+                .when().get(URLs.boards_id_lists)
                 .then().log().all()
                 .assertThat().statusCode(200)
                 .assertThat().contentType(ContentType.JSON)

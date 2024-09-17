@@ -4,22 +4,25 @@ import EndPoints.URLs;
 import TestSuite.BaseTest.Base;
 import UserData.AuthCredentials;
 import io.restassured.http.ContentType;
+import jdk.jfr.Description;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
+import static java.util.Optional.empty;
+import static org.hamcrest.Matchers.not;
 
 public class GetBoard extends Base {
 
     @Test()
+    @Description("Verify retrieving Board info when sending valid get request")
     public void getBoard () {
-        // end point customization
-        String endPoint = URLs.boards+Board.getId();
 
         given().spec(request)
-                .queryParams(AuthCredentials.getAuthParams())
-                .when().get(endPoint)
+                .pathParam("id", Board.getId())
+                .when().get(URLs.boards_id)
                 .then().log().all()
                 .assertThat().statusCode(200)
-                .assertThat().contentType(ContentType.JSON);
+                .assertThat().contentType(ContentType.JSON)
+                .assertThat().body("id", not(empty()));
     }
 }

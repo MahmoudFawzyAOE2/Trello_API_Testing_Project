@@ -1,0 +1,1 @@
+{"uuid":"2867b3ec-ccae-4ec5-84cb-43c880ec4237","name":"TestSuite.ListTests.DeleteList","children":["c2dcaeef-0712-4f6b-b7af-0065b78bb706"],"befores":[{"name":"beforeClass","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1726602487638,"stop":1726602487641}],"afters":[],"start":1726602465632,"stop":1726602491418}
