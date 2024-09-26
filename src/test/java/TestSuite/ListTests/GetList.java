@@ -11,7 +11,8 @@ import static org.hamcrest.Matchers.not;
 
 public class GetList extends Base {
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard"})
     @Description("Verify retrieving List info when sending valid get request")
     public void getList () {
 

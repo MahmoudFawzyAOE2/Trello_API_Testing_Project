@@ -9,7 +9,8 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 public class UpdateList extends Base {
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard"})
     @Description("Verify Updating List info when sending valid put request")
     public void updateList () {
 

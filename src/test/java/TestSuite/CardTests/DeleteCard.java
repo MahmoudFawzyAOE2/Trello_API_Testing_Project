@@ -8,7 +8,10 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 public class DeleteCard extends Base {
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard" ,
+            "TestSuite.CardTests.CreateAndUpdateCard.createAndUpdateCard",
+            "TestSuite.ListTests.GetCardsOnList.getCardsOnList"})
     @Description("Verify Card deletion when sending valid delete request")
     public void deleteCard () {
 
@@ -19,7 +22,10 @@ public class DeleteCard extends Base {
                 .assertThat().statusCode(200);
     }
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard" ,
+            "TestSuite.CardTests.CreateAndUpdateCard.createAndUpdateCard",
+            "TestSuite.ListTests.GetCardsOnList.getCardsOnList", "deleteCard"})
     @Description("Verify deleted Card cannot be retrieved with get request")
     public void getCardAfterDelete () {   // verify that the deleted card cannot be retrieved
 

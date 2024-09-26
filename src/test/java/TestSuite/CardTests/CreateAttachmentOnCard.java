@@ -12,8 +12,10 @@ import static io.restassured.RestAssured.given;
 
 public class CreateAttachmentOnCard extends Base {
 
-
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+                            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard" ,
+                            "TestSuite.CardTests.CreateAndUpdateCard.createAndUpdateCard",
+                            "TestSuite.ListTests.GetCardsOnList.getCardsOnList"})
     @Description("Verify creating an attachment to a Card with valid post request")
     public void createAttachmentOnCard() {
 
@@ -29,7 +31,10 @@ public class CreateAttachmentOnCard extends Base {
         Board.setAttachID(re.path("id"));
     }
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard" ,
+            "TestSuite.CardTests.CreateAndUpdateCard.createAndUpdateCard",
+            "TestSuite.ListTests.GetCardsOnList.getCardsOnList", "createAttachmentOnCard"})
     @Description("Verify adding an attachment as a valid cover to a Card with valid post request")
     public void createAttachmentMP4Cover() {
         // end point customization
@@ -46,7 +51,10 @@ public class CreateAttachmentOnCard extends Base {
                 .assertThat().statusCode(400);
     }
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard" ,
+            "TestSuite.CardTests.CreateAndUpdateCard.createAndUpdateCard",
+            "TestSuite.ListTests.GetCardsOnList.getCardsOnList", "createAttachmentOnCard"})
     @Description("Verify adding an attachment as a valid cover to a Card with valid post request")
     public void createAttachmentPDFCover() {
 
@@ -61,7 +69,10 @@ public class CreateAttachmentOnCard extends Base {
                 .assertThat().statusCode(400);
     }
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard" ,
+            "TestSuite.CardTests.CreateAndUpdateCard.createAndUpdateCard",
+            "TestSuite.ListTests.GetCardsOnList.getCardsOnList", "createAttachmentOnCard"})
     @Description("Verify adding an attachment as a valid cover to a Card with valid post request")
     public void createAttachmentJPGCover() {
 
@@ -76,7 +87,10 @@ public class CreateAttachmentOnCard extends Base {
                 .assertThat().statusCode(200);
     }
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard" ,
+            "TestSuite.CardTests.CreateAndUpdateCard.createAndUpdateCard",
+            "TestSuite.ListTests.GetCardsOnList.getCardsOnList", "createAttachmentOnCard"})
     @Description("Verify adding an attachment as a valid cover to a Card with Cover")
     public void createAttachmentGIFCover() {
 

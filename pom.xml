@@ -85,7 +85,5 @@
         <artifactId>allure-testng</artifactId>
         <version>2.29.0</version>
     </dependency>
-
-
     </dependencies>
 </project>

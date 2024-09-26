@@ -9,7 +9,8 @@ import static io.restassured.RestAssured.given;
 
 public class GetBoardOfList extends Base {
 
-    @Test
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard"})
     @Description("Verify retrieving the Board which the List is on when sending valid get request")
     public void getBoardOfList () {
 

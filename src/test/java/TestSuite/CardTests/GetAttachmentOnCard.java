@@ -13,7 +13,11 @@ import static org.hamcrest.Matchers.not;
 
 public class GetAttachmentOnCard extends Base {
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard" ,
+            "TestSuite.CardTests.CreateAndUpdateCard.createAndUpdateCard",
+            "TestSuite.ListTests.GetCardsOnList.getCardsOnList",
+            "TestSuite.CardTests.CreateAttachmentOnCard.createAttachmentOnCard"})
     @Description("Verify retrieving Board info when sending valid get request")
     public void getAttachment () {
 

@@ -3,7 +3,6 @@ package PojoClasses;
 public class BoardPojo {
     private String name  ;
     private String id  ;
-    private String url  ;
     private String listID1  ;
     private String listID2  ;
     private String listID3  ;
@@ -12,8 +11,7 @@ public class BoardPojo {
 
     public String getId() {return id;}
     public void setId(String id) {this.id = id;}
-    public String getUrl() {return url;}
-    public void setUrl(String url) {this.url = url;}
+
     public String getListID1() {return listID1;}
     public void setListID1(String listID1) {this.listID1 = listID1;}
     public String getListID2() {return listID2;}

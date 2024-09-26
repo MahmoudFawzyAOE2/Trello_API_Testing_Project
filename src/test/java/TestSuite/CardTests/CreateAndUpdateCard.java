@@ -14,7 +14,8 @@ import static org.hamcrest.Matchers.not;
 public class CreateAndUpdateCard extends Base {
 
     String cardId ;
-    @Test(invocationCount = 5)
+    @Test(invocationCount = 5, dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+                                                    "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard"} )
     @Description("Verify Card Creation & Updating when sending valid post & put requests")
     public void createAndUpdateCard() throws InterruptedException {
         // here we run 2 test cases 5 times one after another

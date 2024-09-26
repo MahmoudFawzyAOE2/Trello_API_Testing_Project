@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class GetListsOnBoard extends Base {
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard"})
     @Description("Verify retrieving an array of Lists in Board when sending valid get request")
     public void getListsOnBoard () {
 

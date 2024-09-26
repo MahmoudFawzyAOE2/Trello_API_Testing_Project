@@ -11,7 +11,7 @@ import static java.util.Optional.empty;
 import static org.hamcrest.Matchers.not;
 
 public class CreateList extends Base {
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard"})
     @Description("Verify creating List when sending valid post request")
     public void createList() {
 

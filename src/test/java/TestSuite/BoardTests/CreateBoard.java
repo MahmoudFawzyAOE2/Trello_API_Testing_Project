@@ -14,7 +14,6 @@ public class CreateBoard extends Base {
     @Test()
     @Description("Verify creation of a new board")
     public void createBoard () {
-
         // Generate Board name using Faker
         String fakeBoardName = faker.name().firstName();
         System.out.println("fakeBoardName: "+ fakeBoardName);
@@ -33,12 +32,9 @@ public class CreateBoard extends Base {
 
         // storing Board ID
         Board.setId(re.path("id"));
-
-        // storing Board url
-        Board.setUrl(re.path("url"));
     }
 
-    @Test()
+    @Test(dependsOnMethods = "createBoard")
     @Description("Verify that a newly created Board has no Cards")
     public void getCardsOnNewBoard() {
 

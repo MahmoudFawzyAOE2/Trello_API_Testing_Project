@@ -9,7 +9,11 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 public class DeleteAttachmentOnCard extends Base {
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard" ,
+            "TestSuite.CardTests.CreateAndUpdateCard.createAndUpdateCard",
+            "TestSuite.ListTests.GetCardsOnList.getCardsOnList",
+            "TestSuite.CardTests.CreateAttachmentOnCard.createAttachmentOnCard"})
     @Description("Verify attachment deletion when sending valid delete request")
     public void deleteAttachment () {
 
@@ -21,7 +25,11 @@ public class DeleteAttachmentOnCard extends Base {
                 .assertThat().statusCode(200);
     }
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard" ,
+            "TestSuite.CardTests.CreateAndUpdateCard.createAndUpdateCard",
+            "TestSuite.ListTests.GetCardsOnList.getCardsOnList",
+            "TestSuite.CardTests.CreateAttachmentOnCard.createAttachmentOnCard", "deleteAttachment"})
     @Description("Verify deleted attachment cannot be retrieved with get request")
     public void getAttachmentAfterDelete () {   // verify that the deleted Board cannot be retrieved
 

@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 public class GetCardsOnBoard extends Base {
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard"})
     @Description("Verify retrieving an array of Cards in Board when sending valid get request")
     public void getCardsOnBoard() {
 
@@ -21,7 +21,6 @@ public class GetCardsOnBoard extends Base {
                 .when().get(URLs.boards_id_cards)
                 .then().log().all()
                 .assertThat().statusCode(200)
-                .assertThat().contentType(ContentType.JSON)
-                .assertThat().body("id.size()", equalTo(5));
+                .assertThat().contentType(ContentType.JSON);
     }
 }

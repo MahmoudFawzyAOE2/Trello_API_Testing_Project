@@ -10,7 +10,9 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.hasSize;
 
 public class GetCardsOnList extends Base {
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard" ,
+            "TestSuite.CardTests.CreateAndUpdateCard.createAndUpdateCard"})
     @Description("Verify retrieving an array of cards in List when sending valid get request")
     public void getCardsOnList () {
 

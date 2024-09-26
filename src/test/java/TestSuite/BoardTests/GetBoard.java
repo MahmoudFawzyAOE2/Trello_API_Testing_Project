@@ -13,7 +13,7 @@ import static org.hamcrest.Matchers.not;
 
 public class GetBoard extends Base {
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard"})
     @Description("Verify retrieving Board info when sending valid get request")
     public void getBoard () {
 

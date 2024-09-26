@@ -11,7 +11,8 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 public class ArchiveList extends Base {
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard"})
     @Description("Verify Archiving Card when sending valid put request")
     public void archiveList () {
 
@@ -25,7 +26,8 @@ public class ArchiveList extends Base {
                 .assertThat().body("closed", equalTo(true));
     }
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard", "archiveList"})
     @Description("Verify un-archiving List when sending valid put request")
     public void unarchiveList () {
 

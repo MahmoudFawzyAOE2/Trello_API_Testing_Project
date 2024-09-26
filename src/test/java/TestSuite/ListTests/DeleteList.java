@@ -9,7 +9,8 @@ import static io.restassured.RestAssured.given;
 
 public class DeleteList extends Base {
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard"})
     @Description("verify that the delete List request in not implemented")
     public void deleteList () {
 

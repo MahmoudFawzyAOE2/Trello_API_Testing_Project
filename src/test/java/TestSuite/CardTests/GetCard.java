@@ -11,7 +11,10 @@ import static org.hamcrest.Matchers.not;
 
 public class GetCard extends Base {
 
-    @Test()
+    @Test(dependsOnMethods = {"TestSuite.BoardTests.CreateBoard.createBoard",
+            "TestSuite.BoardTests.GetListsOnBoard.getListsOnBoard" ,
+            "TestSuite.CardTests.CreateAndUpdateCard.createAndUpdateCard",
+            "TestSuite.ListTests.GetCardsOnList.getCardsOnList"})
     @Description("Verify retrieving Card info when sending valid get request")
     public void getCard () {
 
