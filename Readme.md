@@ -19,7 +19,6 @@ TrelloApisRestAssured is a test automation framework tailored for interacting wi
 <a href="https://testng.org/"> <img src="https://howtodoinjava.com/wp-content/uploads/2014/12/TestNG.png" width="60" height="60"/> </a>
 <a href="https://allurereport.org/"> <img src="https://avatars.githubusercontent.com/u/5879127?s=280&v=4" width="60" height="60"/> </a>
 
-
 ## Installation
 To set up the project locally, follow these steps:
 
@@ -46,12 +45,13 @@ This Projcet include testing requests related to 4 functionalites, each in a sep
 <div align="center"><img src="https://github.com/user-attachments/assets/97595214-b76c-466f-a36d-07eed2d69c12" alt="c" width="800" height="550"/> </div>
 
 ## Test Excution
-To run the tests, excute `TestNG.xml` file. or run a single test independently.
+To run the entire test scenario, excute `TestNG.xml` file. or run a single test independently.
 
-Test results will be available in the `allure-results` directory [allure setup needed].
-    ```bash
-    allure serve PATH\TO\PROJECT\Trello_API_Testing_Project\allure-results
-    ```
+Test results will be available in the `allure-results` directory [allure setup needed]
+
+```bash
+allure serve PATH\TO\PROJECT\Trello_API_Testing_Project\allure-results
+```
 
 <div align="center"><img src="https://github.com/user-attachments/assets/9b090ff3-5c55-479f-bc34-b389eac30be1" alt="c" width="800" height="300"/> </div>
 <div align="center"><img src="https://github.com/user-attachments/assets/80431601-a952-4172-bbe1-2f800c2a806e" alt="c" width="800" height="550"/> </div>
@@ -60,7 +60,6 @@ Test results will be available in the `allure-results` directory [allure setup n
 Update the `TestNG.xml` file to configure the test suite. 
 
 API keys and tokens for Trello API access are provided in `AuthCredentials.java`, It's recommended to change them with your own.
-
 
 ## Authors
 - Mahmoud Fawzy - [MahmoudFawzyAOE2](https://github.com/MahmoudFawzyAOE2)
