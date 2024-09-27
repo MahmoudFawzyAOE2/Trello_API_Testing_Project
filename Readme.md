@@ -27,9 +27,7 @@ To set up the project locally, follow these steps:
     ```bash
     git clone https://github.com/MahmoudFawzyAOE2/Trello_API_Testing_Project.git
     ```
-2. Open the Project in a proper IDE (I have used Intelij Idea)
-
-4. Install the required dependencies using Maven
+2. Open the Project in a proper IDE (Intelij Idea, Eclipse,...)
    
 6. Reload the project to ensure that the dependencies are downloaded correctly
 
