@@ -19,6 +19,16 @@
                     <include name="getListsOnBoard"/>
                 </methods>
             </class>
+            <class name="TestSuite.BoardTests.GetCardsOnBoard">
+                <methods>
+                    <include name="getCardsOnBoard"/>
+                </methods>
+            </class>
+            <class name="TestSuite.ListTests.CreateList">
+                <methods>
+                    <include name="createList"/>
+                </methods>
+            </class>
             <class name="TestSuite.CardTests.CreateAndUpdateCard">
                 <methods>
                     <include name="createAndUpdateCard"/>
@@ -27,16 +37,6 @@
             <class name="TestSuite.ListTests.GetCardsOnList">
                 <methods>
                     <include name="getCardsOnList"/>
-                </methods>
-            </class>
-            <class name="TestSuite.BoardTests.GetCardsOnBoard">
-                <methods>
-                    <include name="getCardsOnBoard"/>
-                </methods>
-            </class>
-            <class name="TestSuite.CardTests.GetCard">
-                <methods>
-                    <include name="getCard"/>
                 </methods>
             </class>
             <class name="TestSuite.CardTests.CreateAttachmentOnCard">
@@ -57,6 +57,11 @@
                 <methods>
                     <include name="deleteAttachment"/>
                     <include name="getAttachmentAfterDelete"/>
+                </methods>
+            </class>
+            <class name="TestSuite.CardTests.GetCard">
+                <methods>
+                    <include name="getCard"/>
                 </methods>
             </class>
             <class name="TestSuite.CardTests.DeleteCard">
@@ -84,11 +89,6 @@
             <class name="TestSuite.ListTests.GetBoardOfList">
                 <methods>
                     <include name="getBoardOfList"/>
-                </methods>
-            </class>
-            <class name="TestSuite.ListTests.CreateList">
-                <methods>
-                    <include name="createList"/>
                 </methods>
             </class>
             <class name="TestSuite.ListTests.UpdateList">

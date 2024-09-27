@@ -1,1 +1,0 @@
-{"uuid":"f970650f-0398-4165-9b01-9aa3d1799e57","name":"TestSuite.CardTests.GetAttachmentOnCard","children":["708c403d-bf06-4cf8-8891-37ec66eb4051"],"befores":[{"name":"beforeClass","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1726602484425,"stop":1726602484425}],"afters":[],"start":1726602465631,"stop":1726602491415}

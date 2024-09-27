@@ -1,1 +1,0 @@
-{"uuid":"3c3981a1-4afe-4023-bf74-5d34fccb5e26","name":"TestSuite.BoardTests.GetBoard","children":["d9cce0d1-5393-477e-86a3-c802038f1b5f"],"befores":[{"name":"beforeClass","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1726602470701,"stop":1726602470703}],"afters":[],"start":1726602465629,"stop":1726602491409}
