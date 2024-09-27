@@ -49,6 +49,9 @@ This Projcet include testing requests related to 4 functionalites, each in a sep
 To run the tests, excute `TestNG.xml` file. or run a single test independently.
 
 Test results will be available in the `allure-results` directory [allure setup needed].
+    ```bash
+    allure serve PATH\TO\PROJECT\Trello_API_Testing_Project\allure-results
+    ```
 
 <div align="center"><img src="https://github.com/user-attachments/assets/9b090ff3-5c55-479f-bc34-b389eac30be1" alt="c" width="800" height="300"/> </div>
 <div align="center"><img src="https://github.com/user-attachments/assets/80431601-a952-4172-bbe1-2f800c2a806e" alt="c" width="800" height="550"/> </div>
