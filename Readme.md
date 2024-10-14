@@ -1,10 +1,6 @@
 
 # Trello API Testing Project
 
-<video controls>
-  <source src="DemoRun.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 ## Table of Contents
 - [Description](#description)
@@ -51,6 +47,8 @@ This Projcet include testing requests related to 4 functionalites, each in a sep
 
 ## Test Excution
 To run the entire test scenario, excute `TestNG.xml` file. or run a single test independently.
+
+https://github.com/user-attachments/assets/fe3e52e0-dcfa-4618-868f-f46884d4b09d
 
 Test results will be available in the `allure-results` directory [allure setup needed]
 
