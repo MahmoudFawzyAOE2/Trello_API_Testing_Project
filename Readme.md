@@ -11,7 +11,7 @@
 - [Authors](#authors)
 
 ## Description
-TrelloApisRestAssured is a test automation framework tailored for interacting with Trello's API through RESTful requests. It provides a structured approach to testing and validating various API functionalities, ensuring reliability and efficiency in the testing process. This framework facilitates testing functionalities for creating, retrieving, updating, and deleting resources using the RestAssured library.
+Trello API Testing Project is a test automation framework tailored for interacting with Trello's API through RESTful requests. It provides a structured approach to testing and validating various API functionalities, ensuring reliability and efficiency in the testing process. This framework facilitates testing functionalities for creating, retrieving, updating, and deleting resources using the RestAssured library.
 
 ## Tools and Technologies
 <a href="https://www.java.com/en/"><img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="c" width="60" height="60"/> </a>
