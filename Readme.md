@@ -32,7 +32,7 @@ To set up the project locally, follow these steps:
 6. Reload the project to ensure that the dependencies are downloaded correctly
 
 ## Project Structure
-This Projcet include testing requests related to 4 functionalites, each in a separate directory
+This Project include testing requests related to 4 functionalities, each in a separate directory
 * Board
 * List
 * Card
