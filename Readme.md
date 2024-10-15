@@ -38,7 +38,7 @@ This Project include testing requests related to 4 functionalities, each in a se
 * Card
 * Attachment
 
-> **When running tests independently, tests need a pre-condition to excute properly.**
+> **When running tests independently, tests need a pre-condition to execute properly.**
 > **These pre-conditions are other test methods in same or another class**
 >
 > **This chart shows the dependenies among other methods**
